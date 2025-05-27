@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Forest Predictor</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f0f8ff;
+            margin: 40px;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+        input[type=number], input[type=text] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+        }
+        input[type=submit] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>AI-enhanced intrusion detection system</h2>
+    <form method="POST" action="/predict">
+        <label>Feature 1:</label>
+        <input type="number" step="any" name="feature1" required><br>
+        <label>Feature 2:</label>
+        <input type="number" step="any" name="feature2" required><br>
+        <label>Feature 3:</label>
+        <input type="number" step="any" name="feature3" required><br>
+        <label>Feature 4:</label>
+        <input type="number" step="any" name="feature4" required><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h3>Prediction: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
